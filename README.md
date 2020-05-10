@@ -1,2 +1,2 @@
 # assembler
-two pass assembler in c++
+two pass assembler in java
