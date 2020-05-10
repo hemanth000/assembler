@@ -1,0 +1,44 @@
+--- SUM start 4000
+4000 First ldx zero
+4003  lda zero
+4006 loop Add Table
+4009  tlx count
+400c  jlt count
+400f  sta total
+4012  Rsub loop
+5782 Table resw 2000
+5785 count resw 1
+5788 zero word 1
+578b total resw 1
+578e  end first
+
+#######   SYMTAB    ##########
+
+First 4000
+loop 4006
+Table 5782
+count 5785
+zero 5788
+total 578b
+
+### Object code Generation #####
+
+SUM start 4000             
+First ldx zero           045788
+ lda zero           005788
+loop Add Table           185782
+ tlx count           2c5785
+ jlt count           385785
+ sta total           0c578b
+ Rsub loop           4c4006
+Table resw 2000             
+count resw 1             
+zero word 1             
+total resw 1             
+ end first             
+
+#### object program ##########
+
+H  SUM 004000 00178e
+T 004000 045788 005788 185782 2c5785 385785 0c578b 4c4006 
+E 004000
