@@ -1,0 +1,13 @@
+SUM start 4000
+First ldx zero
+ lda zero
+loop Add Table
+ tlx count
+ jlt count
+ sta total
+ Rsub loop
+Table resw 2000
+count resw 1
+zero word 1
+total resw 1
+ end  first
