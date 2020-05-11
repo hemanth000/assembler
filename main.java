@@ -3,7 +3,7 @@ import java.util.*;
 public class Practice1 {
        public static void main(String [] args)throws Exception {
     	  //1.read from a file
-    	   //2.how to get
+    	   
     	   File file = new File("C:\\Users\\COmputer\\OneDrive\\Desktop\\test.txt");
     	   
     	   BufferedReader br = new BufferedReader(new FileReader(file));
